@@ -1,0 +1,89 @@
+@import '~admin-lte/plugins/select2/css/select2.min.css';
+@import '~admin-lte/plugins/datatables/dataTables.bootstrap4.min.css';
+@import '~admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css';
+@import '~admin-lte/plugins/sweetalert2/sweetalert2.min.css';
+@import '~admin-lte/plugins/daterangepicker/daterangepicker.css';
+@import '~admin-lte/plugins/summernote/summernote-bs4.css';
+@import '~cropper/dist/cropper.min.css';
+
+table.dataTable {
+  th, td {
+    vertical-align: middle;
+  }
+
+  .icheck {
+    display: inline-block;
+  }
+}
+
+div.dataTables_wrapper div.dataTables_processing {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.9);
+
+  .spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-radius: 50%;
+    border: 4px solid #007bff;
+    border-top-color: transparent;
+    animation: spinner .6s linear infinite;
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.data-table {
+  @media screen and (max-width: 767px) {
+    div.dataTables_wrapper {
+      .row:nth-child(2) .col-sm-12 {
+        overflow-x: auto;
+      }
+      div.dataTables_length {
+        label {
+          white-space: normal;
+          text-align: center;
+        }
+
+        select {
+          width: 100%;
+        }
+      }
+
+      div.dataTables_filter {
+        label {
+          white-space: normal;
+          text-align: center;
+          font-weight: 600;
+        }
+      }
+
+      div.dataTables_paginate {
+        ul.pagination {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+//.dataTable {
+//  width: 100%;
+//}

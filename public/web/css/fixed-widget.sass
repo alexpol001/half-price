@@ -1,0 +1,55 @@
+@import 'common.sass'
+
+.fixed-widget
+  pointer-events: none
+  z-index: 1000
+  position: fixed
+  display: flex
+  display: -webkit-box
+  top: 0
+  bottom: 0
+  right: 0
+  flex-direction: column
+  justify-content: flex-end
+  -webkit-box-pack: end
+  -webkit-box-align: end
+  padding: 20px
+  .widget-item
+    pointer-events: auto
+    position: relative
+    &:hover
+      @include crossBrowser(animation, none !important)
+    a.to-map
+      font-size: 1.25em
+      display: block
+      background: #eeaf4b
+      font-weight: 600
+      color: #ffffff
+      padding: 8px
+      width: 300px
+      text-align: center
+      border-radius: 5px
+      &:focus, &:active, &:hover
+        background: #febf5b
+      span, i
+        display: inline-block
+        vertical-align: middle
+      i
+        margin-right: 8px
+        font-size: 1.2em
+    @media screen and (max-width: 767px)
+      a.to-map
+        text-align: center
+        padding: 0
+        width: 70px
+        height: 70px
+        border-radius: 50%
+        i
+          line-height: 70px
+          font-size: 2.5em
+          margin-right: 0
+          display: block
+
+.modal-open
+  .fixed-widget
+    display: none

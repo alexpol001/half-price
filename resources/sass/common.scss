@@ -1,0 +1,146 @@
+ol.breadcrumb {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  .breadcrumb-item {
+    display: inline-block;
+  }
+}
+
+.form-group {
+  &.is-invalid {
+    label {
+      color: #dc3545;
+    }
+  }
+  .invalid-feedback, .hint {
+    display: block;
+    margin-top: 0;
+  }
+  .hint {
+    font-size: 0.6em;
+    font-weight: 600;
+    color: #6c757d;
+  }
+}
+
+.required-star {
+  color: #dc3545;
+  margin-left: 1px;
+}
+
+.form-image {
+  .image-reset {
+    color: #ffffff;
+  }
+  &.round {
+    .cropper-view-box,
+    .cropper-face,
+    .image-crop-preview-wrap,
+    .image-crop-preview {
+      border-radius: 50% !important;
+    }
+  }
+
+  .image-crop-preview-wrap {
+    border: 1px solid #dcdcdc;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  .cropper-crop {
+    cursor: pointer;
+  }
+
+  &:not(.active) {
+    .image-select-file {
+      border-top-right-radius: 0.25rem !important;
+      border-bottom-right-radius: 0.25rem !important;
+    }
+
+    .image-crop {
+      display: none;
+    }
+  }
+}
+
+.image-crop {
+  img {
+    max-width: 100%;
+  }
+
+  .image-crop-upload {
+    float: left;
+  }
+
+  .image-crop-upload {
+    max-width: 400px;
+  }
+
+  .image-crop-preview-block {
+    float: left;
+    margin-left: 1rem;
+    overflow: hidden;
+
+    .image-crop-preview-label {
+      font-weight: 600;
+      line-height: 1;
+      text-align: center;
+    }
+  }
+
+  .cropper-container {
+    margin-bottom: .5rem;
+  }
+}
+
+.card {
+  width: 100%;
+  &.my-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+.select2-container--default .select2-selection--single, .select2-selection .select2-selection--single {
+  height: calc(2.25rem + 2px);
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  margin-top: -2px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 38px;
+  width: 23px;
+  border-left: 1px solid #d2d6de;
+}
+
+.select2-container--open .select2-selection--single .select2-selection__arrow {
+  border-left: 1px solid transparent;
+}
+
+.select2-selection__clear {
+  margin-right: 20px;
+  font-size: 1.5rem;
+  color: #9f9f9f;
+}
+
+#kladr_autocomplete {
+  li[title="Бесплатная версия kladr-api.ru"] {
+    display: none !important;
+  }
+  li {
+    //background: black;
+    //display: block !important;
+  }
+
+  //.autocomplete {
+  //  position: relative;
+  //}
+}
+
+.ox-auto {
+  overflow-x: auto;
+}

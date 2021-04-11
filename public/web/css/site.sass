@@ -1,0 +1,1382 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i&display=swap')
+@import "common.sass"
+
+$bg-primary: #fdf9f9
+$bg-secondary: #6a54ac
+
+html, body
+  line-height: 1.5
+
+body
+  font-family: 'Open Sans', sans-serif
+  font-size: 16px
+  overflow-x: hidden
+  color: #525252
+  *
+    font-family: inherit
+
+a
+  color: inherit
+  font-weight: inherit
+  @include crossBrowser(transition, .2s)
+  &:focus, &:active, &:hover
+    color: inherit
+    text-decoration: none
+
+section
+  padding: 30px 0
+  h2
+    font-weight: 600
+    font-size: 1.5em
+    margin-top: 0
+    margin-bottom: 30px
+  @media screen and (max-width: 767px)
+    padding: 15px 0
+    h2
+      margin-bottom: 15px
+
+.button
+  display: inline-block
+  padding: 10px 15px
+  border: none
+  border-radius: 10px
+  color: #ffffff
+  font-weight: 600
+  &.button-primary
+    background: #41b952
+    &:hover, &:focus
+      background: #34cf4a
+      color: #ffffff
+  &.button-secondary
+    background: #6a54ac
+    &:hover, &:focus
+      background: #896fd4
+      color: #ffffff
+
+ul, li, ol
+  list-style: none
+  margin: 0
+  padding: 0
+  font-size: 1em
+  line-height: 1.25
+
+h1, h2, h3, h4, h5, h6, p
+  line-height: 1.5
+  margin: 0
+
+p
+  font-size: 1em
+
+.form-control:focus
+  box-shadow: none
+
+.form
+  max-width: 750px
+  margin: 0 auto 20px
+  .form-wrap
+    border: 1px solid #9687c5
+    border-radius: 15px
+    padding: 30px 15px
+    form
+      max-width: 560px
+      margin: 0 auto
+      color: #525252
+  a:not(.btn)
+    color: #41b952
+    &:hover, &:active
+      text-decoration: underline
+    &.hint
+      color: #7a7a7a
+  label
+    font-weight: 500
+  .mdl-checkbox
+    height: auto
+  .form-group
+    margin-bottom: 20px
+  .form-control
+    padding: 10px 20px
+    height: auto
+    max-width: 100%
+    border-radius: 15px
+    border-color: #7ace86
+    box-shadow: none
+  button.button-primary
+    margin-top: 10px
+  @media screen and (max-width: 767px)
+    .form-wrap
+      padding: 15px
+    .form-group
+      margin-bottom: 15px
+    button.button-primary
+      margin-top: 0
+
+
+
+.more
+  text-align: center
+  font-weight: 600
+
+.menu
+  display: block
+  .menu-item
+    display: inline-block
+    vertical-align: middle
+    font-weight: 600
+    position: relative
+    a
+      display: inline-block
+      &:hover, &:focus, &.active
+        background: inherit
+        color: #fffc00
+
+
+.menu-toggle
+  display: block
+  float: right
+  width: 40px
+  height: 40px
+  line-height: 40px
+  text-align: center
+  font-size: 2em
+  &:hover
+    color: #fffc00
+
+
+.modal
+  .menu
+    .menu-item
+      display: block
+      padding: 25px 15px
+      a
+        color: #333333
+        padding: 0
+
+
+.main-header, .main-footer
+  padding: 20px 0
+  color: #ffffff
+  font-weight: 600
+
+
+.search
+  width: 100%
+  .form-control, button
+    height: 35px
+    border-radius: 5px
+    border: 1px solid #dbd9d9
+    background: #ffffff
+    color: #8e8e8e
+  .form-control
+    float: left
+    width: 70%
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+    border-right: 1px solid #dbd9d9
+  button
+    border-left: 0
+    float: right
+    width: 30%
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+
+
+.main-header
+  background: #6a54ac
+  .wrap
+    display: flex
+    justify-content: space-between
+  .menu, .logo
+    display: inline-block
+    vertical-align: middle
+  .logo
+    padding-right: 10px
+  .menu
+    white-space: nowrap
+    padding-top: 4px
+    .menu-item
+      &:first-child
+        a
+          padding-left: 0
+      &:last-child
+        a
+          padding-right: 0
+      a
+        padding: 10px
+        .menu-text
+          @include crossBrowser(transition, inherit)
+          border-bottom: 1px solid transparent
+        &:hover, &.active
+          .menu-text
+            border-color: #e0da42
+        i
+          padding-right: 3px
+  .search
+    width: 360px
+    .form-control, button
+      background: #ffffff
+      color: #8e8e8e
+      border: none
+    .form-control
+      border-right: 1px solid #dbd9d9
+
+  @media screen and (max-width: 1199px)
+    .menu, .logo
+      float: none
+    .search
+      width: auto
+  @media screen and (max-width: 991px)
+    .logo
+      float: left
+
+.main-footer
+  background: #41b952
+  font-size: 0.875em
+  .menu, .social, .feedback
+    margin-bottom: 20px
+  .menu
+    .menu-item
+      a
+        padding: 10px 20px
+      &:first-child
+        a
+          padding-left: 10px
+      &:last-child
+        a
+          padding-right: 0
+  .social
+    float: right
+    .social-item
+      display: inline-block
+      &:not(:first-child)
+        margin-left: 10px
+      a
+        display: block
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        text-align: center
+        background: #6a54ac
+        color: #ffffff
+        font-size: 1.4em
+        line-height: 40px
+        &:hover
+          background: #9f83ef
+  .feedback
+    background: #6a54ac
+    color: #ffffff
+    font-weight: 600
+    padding: 10px 20px
+    &:hover
+      background: #896fd4
+  p
+    margin-top: 25px
+    margin-bottom: 0
+    a:hover
+      text-decoration: underline
+    &.copyright
+      text-align: right
+    &.developer
+      margin-top: 0
+  @media screen and (max-width: 1199px)
+    .menu
+      .menu-item
+        a
+          padding: 10px
+  @media screen and (max-width: 991px)
+    .menu
+      text-align: center
+    p, p.developer, p.copyright
+      margin-top: 10px
+      text-align: center
+  @media screen and (max-width: 767px)
+    text-align: center
+    .social
+      float: none
+
+
+.page-toggle
+  margin-bottom: 20px
+  .page-toggle-text, a
+    display: inline-block
+    vertical-align: middle
+    margin-bottom: 10px
+  .page-toggle-text
+    margin-right: 10px
+  a
+    padding: 5px 12px
+    border: 1px solid #d7d6d6
+    border-radius: 10px
+    &:not(:last-child)
+      margin-right: 20px
+    &:hover, &.active
+      background: #41b952
+      border-color: #41b952
+      color: #ffffff
+  @media screen and (max-width: 767px)
+    margin-bottom: 15px
+    .page-toggle-text
+      display: block
+      margin-right: 0
+    a
+      &:not(:last-child)
+        margin-right: 0
+
+.to-back
+  display: inline-block
+  border: 1px solid #d7d6d6
+  border-radius: 8px
+  padding: 5px 20px
+  background: #ffffff
+  color: #6f6f6f
+  font-weight: 600
+  i.fa
+    margin-right: 10px
+  &:hover
+    background: #41b952
+    color: #ffffff
+    border-color: #41b952
+
+.product-list
+  font-weight: 500
+  .product-item
+    display: block
+    background: #ffffff
+    margin-bottom: 30px
+    @include crossBrowser(box-shadow, 2px 2px 10px -2px rgba(0,0,0,0.5))
+    &:hover
+      .sale-info
+        .sale-value
+            background: #34cf4a
+    .product-header
+      height: 140px
+    .product-content
+      position: relative
+      height: 160px
+      margin-top: 20px
+      padding: 15px 10px
+    .product-footer
+      padding: 25px 10px
+      border-top: 1px solid #dcdcdc
+      @include crossBrowser(display, flex)
+      @include crossBrowser(justify-content, space-between)
+      @media screen and (min-width: 1200px)
+        padding-right: 40px
+    .sale-info
+      width: 50%
+      height: 100%
+      float: left
+      text-align: center
+      position: relative
+      .sale-value
+        display: inline-block
+        margin: 15px 0
+        padding: 10px 15px
+        border-radius: 20px
+        background: #41b952
+        color: #fffc00
+        font-weight: 600
+      .sale-date
+        color: #636363
+      .net
+        position: absolute
+        bottom: -20px
+        height: 40px
+        width: 100%
+        text-align: center
+        font-size: 0
+        .net-logo, .border
+          display: inline-block
+          vertical-align: middle
+        img
+          height: 100%
+          width: 40px
+        .border
+          height: 1px
+          width: 30px
+          background: #7dd49b
+
+    .product-logo
+      border: 1px solid #dcdcdc
+      border-top: 0
+      border-right: 0
+      width: 45%
+      float: right
+      text-align: center
+      padding: 30px 15px
+      img
+        width: auto
+        max-height: 100%
+        max-width: 100%
+    .product-title
+      font-weight: 600
+    .volume-price
+      color: #636363
+      font-size: 0.85em
+      position: absolute
+      bottom: 20px
+    .price, .old-price
+      display: inline-block
+      vertical-align: middle
+      white-space: nowrap
+    .price
+      font-weight: 600
+      font-size: 1.5em
+      color: #3d3d3d
+    .old-price
+      color: #676767
+      font-size: 1.125em
+      line-height: 2.2em
+      text-decoration: line-through
+    @media screen and (max-width: 767px)
+      margin-bottom: 15px
+      .product-content
+        height: auto
+      .volume-price
+        margin-top: 20px
+        position: static
+
+.review-list
+  .review-item
+    margin-bottom: 30px
+    .review-header
+      margin-bottom: 20px
+      @media screen and (min-width: 768px)
+        white-space: nowrap
+      .name, .city, .review-score
+        display: inline-block
+        vertical-align: middle
+        @media screen and (max-width: 767px)
+          display: block
+          &.city
+            margin-bottom: 0
+      .name
+        font-weight: 600
+        color: #292929
+      .city
+        color: #41b952
+        margin-right: 20px
+      .review-score
+        color: #edce00
+        font-size: 1.25em
+        .fa-star:not(:last-child)
+          margin-right: 5px
+        .empty, > .fa-star
+          display: inline-block
+          vertical-align: middle
+          position: relative
+        .empty
+          color: #ffffff
+          line-height: 1
+          .fa-star
+            opacity: 0
+          img
+            position: absolute
+            left: 0
+            top: -1px
+  @media screen and (max-width: 767px)
+    .review-item
+      .review-header
+        margin-bottom: 5px
+
+
+
+.filter
+  .filter-item
+    margin-bottom: 15px
+    .active, a:hover
+      color: #ffffff
+      background: #41b952
+    .filter-header, .filter-content
+      border: 1px solid #dfdddd
+      border-radius: 5px
+      overflow: hidden
+    .filter-header
+      display: block
+      padding: 13px
+      @include crossBrowser(display, flex)
+      @include crossBrowser(justify-content, space-between)
+      .icon
+        font-size: 1.75em
+        color: #41b952
+      h3
+        font-size: 1em
+        font-weight: bold
+      h3, .icon
+        line-height: 30px
+    .filter-value
+      font-weight: 400
+      a
+        font-weight: inherit
+        display: block
+        padding: 8px 13px
+      label
+        margin: 3px
+        margin-left: 13px
+        font-weight: inherit
+    &.filter-shop
+      .filter-content
+        padding: 20px 0
+
+
+.pagination-product
+  text-align: center
+  a, .points
+    display: inline-block
+    margin: 0 15px 10px 0
+    font-size: 1.125em
+    font-weight: 400
+  a
+    padding: 6px
+    border: 1px solid #c4b9db
+    border-radius: 8px
+    text-align: center
+    min-width: 35px
+    &:hover, &.active
+      background: #6a54ac
+      border-color: #6a54ac
+      color: #ffffff
+    &.last, &.next
+      padding-left: 12px
+      padding-right: 12px
+      i
+        padding-left: 12px
+
+
+.product-card
+  margin: 40px 0
+  background: #ffffff
+  height: 320px
+  @include crossBrowser(box-shadow, 2px 2px 10px -2px rgba(0,0,0,0.5))
+  .product-info
+    float: left
+    width: 70%
+  .product-logo
+    float: right
+    width: 30%
+    text-align: center
+    border-left: 1px solid #cdcdcd
+    overflow: hidden
+    padding: 40px 0
+    height: 100%
+    img
+      height: 240px
+      width: auto
+  .product-header
+    height: 85px
+    padding: 20px 0
+    color: #636363
+  .product-content
+    height: 150px
+  .product-footer
+    height: 85px
+    border-top: 1px solid #cdcdcd
+  .product-header, .product-content, .product-footer
+    padding-left: 30px
+    padding-right: 30px
+  .net, .sale-date, .sale-value
+    display: inline-block
+    vertical-align: middle
+  .net
+    .net-name, .border, .net-logo
+      display: inline-block
+      vertical-align: middle
+    .net-name
+      font-weight: 600
+    .net-logo, .border
+      display: inline-block
+      vertical-align: middle
+      img
+        height: 100%
+        width: 40px
+    .border
+      height: 1px
+      width: 25px
+      background: #7dd49b
+      &.left
+        margin-left: 10px
+      &.right
+        margin-right: 10px
+  .sale-date
+    font-weight: bold
+    font-size: 1.75em
+    margin-right: 20px
+  .sale-value
+    padding: 8px 15px
+    border-radius: 20px
+    background: #41b952
+    color: #fffc00
+    font-weight: 600
+  .product-content
+    .product-description
+      font-size: 1.625em
+      font-weight: 500
+      height: 110px
+      line-height: 1.25em
+      .product-title
+        font-weight: 600
+    .volume-price
+      font-size: 1.125em
+      color: #6f6f6f
+  .price, .old-price, .show-code
+    display: inline-block
+    vertical-align: middle
+    margin-top: 18px
+  .price
+    font-size: 1.875em
+    font-weight: 600
+    color: #3d3d3d
+    margin-right: 40px
+  .old-price
+    font-weight: 500
+    font-size: 1.625em
+    text-decoration: line-through
+    color: #636363
+  .show-code
+    color: #ffffff
+    font-size: 1.125em
+    float: right
+    background: $bg-secondary
+    padding: 12px 30px
+    border-radius: 20px
+    &:hover
+      background: #896fd4
+  @media screen and (max-width: 991px)
+    font-size: 0.8em
+    margin: 15px 0
+    .product-info, .product-logo
+      width: auto
+      float: none
+      border: none
+    .product-logo
+      height: 320px
+    height: auto
+    .product-header, .product-content, .product-footer, .product-description
+      height: auto !important
+    .product-header
+      text-align: center
+      border-top: 1px solid #cdcdcd
+    .product-description
+      margin-bottom: 15px
+    .product-footer
+      margin-top: 10px
+      text-align: center
+      padding: 10px
+    .price, .old-price, .show-code
+      margin: 5px
+    .show-code
+      float: none
+
+.instruction-list
+  color: inherit
+  text-align: center
+  .instruction-item
+    margin-top: 50px
+  .instruction-title
+    font-size: 1.5em
+    font-weight: 600
+    line-height: 1.2
+    margin: 15px 0
+  .instruction-text
+    font-size: 1.25em
+    margin-bottom: 40px
+    font-weight: 400
+    display: none
+  @media screen and (max-width: 767px)
+    .instruction-item
+      margin-top: 30px
+    .instruction-title
+      font-size: 1.2em
+
+.home-banner
+  color: #ffffff
+  background: #41b952 url('/img/home/banner1.jpg') no-repeat 50%
+  background-size: cover
+  margin: 50px 0
+  padding: 60px 0
+  h2
+    text-align: left
+    display: inline-block
+    margin-bottom: 50px
+    strong
+      font-weight: inherit
+      color: #f9e937
+  .icons
+    white-space: nowrap
+    margin-bottom: 50px
+    .icon
+      display: inline-block
+      width: 30%
+      img
+        max-width: 100%
+        height: auto
+  .offer-text
+    font-size: 1.25em
+  .offer-button
+    position: relative
+    padding-top: 25px
+    display: inline-block
+    .offer-arrow
+      position: absolute
+      right: -70%
+      top: 0
+    .button
+      padding: 12px
+      width: 150px
+      border-radius: 5px
+  @media screen and (max-width: 767px)
+    background-image: none
+    padding: 40px 0
+    margin: 40px 0
+    h2, .icons
+      margin-bottom: 15px
+    h2
+      font-size: 1.25em
+    .offer-text
+      font-size: 1.1em
+
+.stores
+  background: $bg-primary
+  .more
+    color: #41b952
+    a
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+
+.instruction
+  margin-top: 80px
+  background: $bg-secondary
+  position: relative
+  padding: 80px 0
+  color: #ffffff
+  h2
+    color: inherit
+    font-size: 1.875em
+    margin-bottom: 0
+    line-height: 1.25
+  &:before, &:after
+    position: absolute
+    content: ''
+    width: 100%
+    height: 50px
+    background: #ffffff
+  &:before
+    height: 70px
+    border-bottom-left-radius: 50%
+    border-bottom-right-radius: 50%
+    top: -25px
+    background-image: url("/img/strix.png")
+    background-repeat: no-repeat
+    background-position: 50% 0
+  &:after
+    border-top-left-radius: 50%
+    border-top-right-radius: 50%
+    bottom: -25px
+  .more
+    margin-top: 50px
+    color: #ffffff
+    a
+      display: inline-block
+      width: 280px
+      padding: 15px
+      border: 2px solid #ffffff
+      border-radius: 20px
+      &:hover
+        text-decoration: none
+        background: #9f83ef
+        border-color: #9f83ef
+      @media screen and (max-width: 767px)
+        width: auto
+  @media screen and (max-width: 767px)
+    padding: 50px 0
+    margin-top: 0
+    &:before
+      display: none
+    h2
+      font-size: 1.5em
+      text-align: center
+
+.review
+  padding-top: 25px
+  .border-wrap
+    border: 1px solid #41b952
+    padding: 40px
+    @media screen and (max-width: 1199px)
+      padding-left: 15px
+      padding-right: 15px
+  .more
+    color: #6a54ac
+    a:hover
+      text-decoration: underline
+  @media screen and (max-width: 767px)
+    h2
+      font-size: 1.2em
+    .border-wrap
+      padding: 15px
+
+
+.command-list
+  .commands-image
+    //margin-top: 220px
+  .command-item
+    .command-icon
+      font-size: 3.75em
+      color: #41b952
+    .command-text
+      font-size: 1.25em
+      text-align: left
+    .command-image
+      margin: 40px 0
+      img
+        max-width: 100%
+        height: auto
+  @media screen and (max-width: 767px)
+    .command-item
+      .command-icon
+        font-size: 2em
+      .command-text
+        text-align: center
+        font-size: 1em
+      .command-image
+        margin: 15px 0
+        img
+          max-width: 100px
+
+
+.advantage-list
+  .advantage-item
+    margin-top: 15px
+    .advantage-image
+      margin-bottom: 10px
+      img
+        max-width: 100%
+        height: auto
+    .advantage-title
+      font-size: 1.5em
+      font-weight: 600
+      margin-bottom: 15px
+    .advantage-text
+      font-size: 1.25em
+      font-weight: 400
+  @media screen and (max-width: 767px)
+    .advantage-item
+      .advantage-image
+        img
+          max-width: 150px
+      .advantage-title
+        margin-bottom: 0
+
+.review-slider
+  position: relative
+  .owl-nav
+    font-size: 80px
+    line-height: 1
+    .owl-prev, .owl-next
+      position: absolute
+      top: 50%
+      margin-top: -50px
+    .owl-next
+      right: 0
+  .owl-dots
+    text-align: center
+    .owl-dot
+      display: inline-block
+      width: 10px
+      height: 10px
+      background: #525252
+      border-radius: 50%
+      margin: 5px
+      &.active
+        background: #41b952
+  .review-slide
+    @include crossBrowser(box-shadow, 2px 2px 10px -2px rgba(0,0,0,0.5))
+    max-width: 770px
+    margin: 10px auto
+    .review-image
+      float: left
+      width: 35%
+      img
+        max-width: 100%
+        height: auto
+    .review-content
+      color: #292929
+      width: 65%
+      float: right
+      padding: 40px 15px 15px 15px
+      .review-text
+        line-height: 2
+      .review-info
+        margin-top: 20px
+        .name
+          font-weight: 600
+        .city
+          color: #41b952
+  @media screen and (max-width: 991px)
+    .owl-nav
+      font-size: 40px
+      line-height: 1
+      .owl-prev, .owl-next
+        position: absolute
+        top: 50%
+        margin-top: -25px
+      .owl-next
+        right: 0
+    .owl-dots
+      display: none
+    .review-slide
+      margin: 10px 20px
+      .review-content
+        width: auto
+        float: none
+        padding: 15px
+        .review-text
+          line-height: 1.5
+
+
+.accordion-list
+  max-width: 760px
+  margin: 0 auto
+  .accordion-item
+    border-bottom: 1px solid #9b8cc6
+    padding-bottom: 15px
+    margin-bottom: 15px
+    .title, .content
+      border-radius: 15px
+      padding: 20px
+    .title
+      border: 1px solid #41b952
+      font-size: 1.25em
+      cursor: pointer
+      @include crossBrowser(transition, .2s)
+      @include crossBrowser(display, flex)
+      @include crossBrowser(justify-content, space-between)
+      h3, .icon
+        font-size: inherit
+      .icon
+        margin-left: 5px
+        line-height: 20px
+        i
+          @include crossBrowser(transition, .2s)
+      i.cl
+        color: #ffffff
+        font-weight: bold
+        font-style: italic
+        font-size: 0.9em
+        display: none
+      i.fa
+        color: #00c21b
+        font-size: 1.5em
+      &.active, &:hover
+        background: #41b952
+        color: #ffffff
+      &:hover
+        i
+          color: #fffc00
+      &.active
+        i.cl
+          display: inline
+        i.fa
+          display: none
+    .content
+      border: 1px solid #d3d3d3
+      margin-top: 3px
+  @media screen and (max-width: 767px)
+    .accordion-item
+      .title
+        font-size: 1.1em
+
+
+.stage-list
+  .stage-item
+    font-size: 1.15em
+    h3
+      font-size: 1.1em
+      font-weight: 600
+      margin-bottom: 10px
+    .num, .arrow
+      display: inline-block
+    .num
+      width: 50px
+      height: 50px
+      font-size: 1.3em
+      color: #ffffff
+      border-radius: 50%
+      font-weight: 600
+      font-style: italic
+      padding-top: 6px
+    .arrow
+      padding: 15px 0
+      width: 25px
+      img
+        width: 100%
+        height: auto
+  @media screen and (max-width: 767px)
+    .stage-item
+      h3
+        font-size: 1em
+        margin-top: 10px
+        margin-bottom: 0
+      .content
+        text-align: center
+        margin-bottom: 15px
+
+
+.showcase
+  background: $bg-primary
+  h2
+    .hint
+      display: block
+      font-size: 0.6em
+  .shop-preview
+    background: #ffffff
+    margin-bottom: 50px
+    text-align: center
+    @include crossBrowser(box-shadow, 3px 3px 10px -2px rgba(0,0,0,0.3))
+    .shop-logo, .shop-info
+      height: 110px
+      padding: 15px
+      overflow: hidden
+      @include crossBrowser(display, flex)
+      @include crossBrowser(align-items, center)
+      @include crossBrowser(justify-content, center)
+    .shop-logo
+      border-right: 1px solid #d4d3d3
+      img
+        max-width: 100%
+        height: auto
+    .shop-info
+      h3, .sale-value
+        display: inline-block
+        vertical-align: middle
+      h3
+        font-size: 1.55em
+        font-weight: 600
+        margin-right: 40px
+        color: #636363
+      .sale-value
+        color: #fffc00
+        background: #41b952
+        padding: 7px 15px
+        border-radius: 15px
+        font-weight: 600
+    @media screen and (max-width: 767px)
+      margin-bottom: 30px
+      .shop-logo, .shop-info
+        height: auto
+        @include crossBrowser(display, block)
+      .shop-logo
+        border-right: 0
+        border-bottom: 1px solid #d4d3d3
+      .shop-info
+        h3, .sale-value
+          display: block
+        h3
+          margin-right: 0
+          margin-bottom: 15px
+        .sale-value
+          padding-top: 10px
+          padding-bottom: 10px
+
+
+.product
+  background: $bg-primary
+
+.special
+  background: $bg-secondary
+  h2
+    color: #ffffff
+
+.bar-code
+  border-top: 1px solid #41b952
+  text-align: center
+  font-size: 1.5em
+  font-weight: 600
+  p, h2
+    line-height: 1.25
+    font-size: 1em
+  .code
+    margin-top: 30px
+    border: 1px solid #6a54ac
+    padding: 40px 15px
+    img
+      max-width: 100%
+      height: auto
+    .title
+      margin-bottom: 30px
+  @media screen and (max-width: 768px)
+    font-size: 1.2em
+    .code
+      margin-top: 15px
+      padding: 15px
+      .title
+        margin-bottom: 15px
+
+.commands
+  text-align: center
+  h2
+    font-size: 2.25em
+    margin-bottom: 0
+    @media screen and (max-width: 767px)
+      font-size: 1.2em
+
+.advantage
+  text-align: center
+
+.reviews
+  h2
+    text-align: center
+    font-size: 1.875em
+    @media screen and (max-width: 767px)
+      font-size: 1.2em
+
+.product-code-page
+  .product
+    padding-bottom: 0
+
+.about-page
+  .advantage
+    background: #41b952
+    color: #ffffff
+
+.banner
+  background: #767777 url('/img/place-catalog/banner.jpg') no-repeat 50%
+  background-size: cover
+  color: #ffffff
+  font-size: 1.5em
+  h2
+    margin-top: 20px
+    margin-bottom: 10px
+    strong
+      font-weight: inherit
+      color: #ffea00
+  .button-primary
+    font-size: 0.83em
+    margin-top: 100px
+  img
+    max-width: 100%
+  @media screen and (max-width: 767px)
+    font-size: 1.2em
+    .button-primary
+      margin-top: 30px
+
+.conditions
+  background: #f9f9f9
+  h2
+    text-align: center
+    font-size: 1.875em
+    color: #1e1e1e
+    @media screen and (max-width: 767px)
+      font-size: 1.4em
+
+.stages
+  h2
+    text-align: center
+    font-size: 1.875em
+    color: #1e1e1e
+    @media screen and (max-width: 767px)
+      font-size: 1.4em
+  .button-secondary
+    margin-top: 30px
+    font-size: 1.15em
+
+.faq
+  h2, .feedback-text
+    text-align: left
+    font-size: 1.875em
+    color: #525252
+    font-weight: 600
+    @media screen and (max-width: 767px)
+      font-size: 1.4em
+  .feedback-text
+    text-align: center
+    margin-bottom: 20px
+  .button.button-primary
+    font-size: 1.5em
+    padding: 15px 25px
+    margin: 20px 0
+    @media screen and (max-width: 767px)
+      font-size: 1em
+      padding: 10px 15px
+      margin-top: 0
+
+.global-map
+  padding: 0
+  position: relative
+  overflow-x: hidden
+  a
+    position: absolute
+    left: 50%
+    top: 50%
+  img
+    min-width: 100%
+
+  &:after
+    content: ''
+    display: block
+    height: 60px
+    background: #ffffff url("/img/strix.png") no-repeat 50%
+    @media screen and (max-width: 767px)
+      display: none
+
+.article
+  h2
+    margin-bottom: 0
+    font-size: 1.15em
+  h2, h3, h4, h5, h6
+    font-weight: bold
+  h3, h4, h5, h6, p
+    font-size: 1em
+    margin: 30px 0
+  p
+    text-align: justify
+
+.place-catalog-page
+  .advantage
+    h2
+      font-size: 1.875em
+      color: #1e1e1e
+      @media screen and (max-width: 767px)
+        font-size: 1.4em
+    .advantage-title
+      font-size: 1.2em
+      margin-bottom: 5px
+    .advantage-text
+      font-size: 1em
+
+#menuModal
+  .modal-content
+    background: #6a54ac
+  .modal-header
+    background: #41b952
+    color: #ffffff
+    font-size: 1.15em
+    h4
+      font-size: inherit
+      font-weight: 600
+    .close
+      color: inherit
+      opacity: 1
+      font-size: 1.5em
+      &:hover
+        color: #fffc00
+  .modal-body
+    .menu-item:first-child
+      background: #ffffff
+    .menu-item:not(:first-child)
+      padding-bottom: 25px
+      padding-top: 0
+      a
+        color: #ffffff
+        &:hover, &.active
+          color: #fffc00
+      &:nth-child(2)
+        padding-top: 25px
+
+#cabinet
+  background: #fdf9f9
+
+.map-page, .cabinet-page
+  .to-map
+    display: none !important
+  h3
+    line-height: 1.25
+    margin-bottom: 15px
+    //text-align: center
+
+.cabinet-page
+  .content-header
+    padding-top: 25px
+    padding-bottom: 0
+  h2
+    font-size: 1.5em
+    font-weight: 400
+    margin-bottom: 25px
+  .breadcrumb
+    background: inherit
+    a:hover
+      text-decoration: underline
+  .left-menu, .right-content
+    width: 100%
+    background: #ffffff
+    border: 1px solid #dfdddd
+    margin-bottom: 30px
+  .left-menu .menu-item
+    &:not(:last-child)
+      border-bottom: 1px solid #ffffff
+    a
+      display: block
+      padding: 8px 15px
+      font-size: 1.15em
+      &.active, &:hover
+        background: #41b952
+        color: #ffffff
+  .right-content
+    div.dataTables_wrapper div.dataTables_processing .spinner::before
+      border: 4px solid #41b952
+      border-top-color: transparent
+    .card
+      border: none
+      .card-header
+        > .card-tools
+          position: absolute
+          right: 1rem
+          top: .5rem
+        > .card-title
+          margin-bottom: 0
+          font-size: 1.3em
+  form
+    margin-top: 20px
+    padding-left: 15px
+    padding-right: 15px
+    .form-control
+      border-radius: 0
+      padding: 7px 15px
+      border-color: #cacaca
+  .modal
+    form
+      margin-top: 0
+  .bg-orange
+    color: #1f2d3d !important
+    background-color: #fd7e14
+  .btn.btn-success
+    background: #41b952
+  .shop-info
+    padding: 5px 0
+    background: #eeeeee
+    border: 1px solid #cacaca
+    border-bottom: 0
+    .shop-img, .shop-email
+      display: inline-block
+      vertical-align: middle
+    img
+      margin-right: 5px
+      margin-left: 8px
+      width: 35px
+      height: 35px
+      border-radius: 50%
+  .select2-container--default
+    .select2-selection--single
+      padding: 6px 7px !important
+      border-color: #cacaca !important
+      .select2-selection__arrow
+        top: 8px !important
+        right: 10px !important
+    .select2-selection--single
+      border-radius: 0 !important
+    .select2-dropdown
+      border-radius: 0 !important
+
+#shop-map
+  .ymaps-2-1-74-image
+    border-radius: 50% !important
+  .ymaps-2-1-74-balloon__content
+    font-weight: 600
+    font-size: 14px
+
+.code-error
+  text-align: center
+  h2
+    font-size: 5em
+    margin-bottom: 15px
+  h3
+    font-size: 2.5em

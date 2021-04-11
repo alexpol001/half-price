@@ -1,0 +1,48 @@
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+// font awesome
+@import '~admin-lte/plugins/fontawesome-free/css/all.css';
+
+// Common
+@import 'common';
+
+.select2-container--default {
+  .select2-selection--single {
+    padding: 7px 10px !important;
+    height: auto !important;
+    max-width: 100% !important;
+    border-color: #7ace86 !important;
+
+    .select2-selection__arrow {
+      top: 8px !important;
+      right: 10px !important;
+    }
+  }
+
+  .select2-selection--single {
+    border-radius: 15px !important;
+  }
+
+  &.select2-container--open {
+    &.select2-container--below {
+      .select2-selection--single {
+        border-bottom-right-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+      }
+    }
+    &.select2-container--above {
+      .select2-selection--single {
+        border-top-right-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+      }
+    }
+  }
+
+  .select2-dropdown {
+    border-color: #7ace86 !important;
+  }
+}
+
+.select2-container--default .select2-results__option--highlighted {
+  background-color: #41b952 !important;
+}

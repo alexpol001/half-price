@@ -1,0 +1,103 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Common
+@import 'common';
+
+//Admin-lte
+@import '~admin-lte/dist/css/adminlte.min.css';
+@import '~admin-lte/plugins/fontawesome-free/css/all.min.css';
+@import 'fields';
+
+
+html {
+  min-height: 100% !important;
+  body.modal-open {
+    //height: 100vh !important;
+  }
+}
+
+* {
+  outline: none;
+}
+
+.brand-image {
+  max-width: 34px;
+}
+
+.content-header h2 {
+  font-size: 1.6rem;
+  border-top: 0.1rem solid #ffc107;
+  margin-bottom: 0;
+}
+
+.breadcrumb {
+  a {
+    color: #212529;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.modal {
+  overflow-y: auto;
+  &.confirm {
+    .bg-warning, .btn-warning {
+      background: #f0ad4e !important;
+      color: #ffffff !important;
+    }
+
+    .btn-warning:hover {
+      background: #e08e0b !important;
+    }
+
+    .btn-outline-dark {
+      background: #f4f4f4;
+      border-color: #adadad;
+      &:hover {
+        background: #e7e7e7;
+        color: inherit;
+      }
+    }
+
+    &.waiting {
+      button {
+        pointer-events: none;
+      }
+    }
+
+    &:not(.waiting) {
+      .overlay {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+.sidebar-dark-warning .nav-sidebar > .nav-item > .nav-link.active {
+  color: #1f2d3d;
+}
+
+.tabs {
+  > .card {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .nav-link {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: 1.2em;
+    font-weight: 500;
+    &.active {
+      background: #ffc107;
+      color: #1f2d3d;
+    }
+    &:not(.active):hover {
+      color: #ffc107;
+    }
+  }
+}

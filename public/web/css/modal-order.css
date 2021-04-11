@@ -1,0 +1,191 @@
+@-webkit-keyframes consultant-online-order {
+  2%, 6%, 10%, 14% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  4%, 8%, 12%, 16% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  17% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes consultant-online-order {
+  2%, 6%, 10%, 14% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  4%, 8%, 12%, 16% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  17% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-ms-keyframes consultant-online-order {
+  2%, 6%, 10%, 14% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  4%, 8%, 12%, 16% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  17% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes consultant-online-order {
+  2%, 6%, 10%, 14% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  4%, 8%, 12%, 16% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  17% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+body.modal-open {
+  min-width: 320px;
+}
+body.modal-open .modal {
+  min-width: 320px;
+}
+
+#myModal .modal-content {
+  border: none;
+  border-radius: 20px;
+}
+#myModal .modal-content .order-form {
+  font-size: 1.2em;
+  max-width: inherit;
+  text-align: center;
+}
+#myModal .modal-content .order-form .close {
+  color: #ffffff;
+  font-size: 2em;
+  opacity: 1;
+  text-shadow: none;
+}
+#myModal .modal-content .order-form .close:hover {
+  color: #e52e2e;
+}
+#myModal .modal-content .order-form h3 {
+  font-size: 1.5em;
+}
+#myModal .modal-content .order-form .limit {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+#myModal .modal-content .order-form .form-group {
+  margin-bottom: 20px;
+}
+
+.fixed-widget {
+  pointer-events: none;
+  z-index: 1000;
+  position: fixed;
+  display: flex;
+  display: -webkit-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  -webkit-box-pack: end;
+  -webkit-box-align: end;
+  padding: 60px 20px 60px;
+}
+.fixed-widget .widget-item {
+  pointer-events: auto;
+  position: relative;
+  -webkit-animation: consultant-online-order 5s linear infinite;
+  -moz-animation: consultant-online-order 5s linear infinite;
+  -o-animation: consultant-online-order 5s linear infinite;
+  -ms-animation: consultant-online-order 5s linear infinite;
+  animation: consultant-online-order 5s linear infinite;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  -ms-animation-delay: 2s;
+  animation-delay: 2s;
+}
+.fixed-widget .widget-item:hover {
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+}
+.fixed-widget .widget-item a.online-order {
+  font-size: 1.15em;
+  display: block;
+  background: #ee3f3f;
+  font-weight: 500;
+}
+.fixed-widget .widget-item a.online-order:focus, .fixed-widget .widget-item a.online-order:active, .fixed-widget .widget-item a.online-order:hover {
+  background: #f25050;
+}
+.fixed-widget .widget-item a.online-order span, .fixed-widget .widget-item a.online-order i {
+  display: inline-block;
+  vertical-align: middle;
+}
+.fixed-widget .widget-item a.online-order i {
+  margin-right: 15px;
+  font-size: 1.8em;
+}
+
+.modal-open {
+  padding-right: 0 !important;
+  overflow: auto !important;
+}
+.modal-open .fixed-widget {
+  display: none;
+}
+
+/*# sourceMappingURL=modal-order.css.map */

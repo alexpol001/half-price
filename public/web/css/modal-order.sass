@@ -1,0 +1,79 @@
+@import 'common.sass'
+
+@include keyframes(consultant-online-order)
+  2%, 6%, 10%, 14%
+    @include crossBrowser(transform, translateX(-10px))
+  4%, 8%, 12%, 16%
+    @include crossBrowser(transform, translateX(10px))
+  17%
+    @include crossBrowser(transform, translateX(0))
+
+body
+  &.modal-open
+    min-width: 320px
+    .modal
+      min-width: 320px
+
+#myModal
+  .modal-content
+    border: none
+    border-radius: 20px
+    .order-form
+      font-size: 1.2em
+      max-width: inherit
+      text-align: center
+      .close
+        color: #ffffff
+        font-size: 2em
+        opacity: 1
+        text-shadow: none
+        &:hover
+          color: #e52e2e
+      h3
+        font-size: 1.5em
+      .limit
+        font-weight: bold
+        font-size: 1.2em
+      .form-group
+        margin-bottom: 20px
+
+.fixed-widget
+  pointer-events: none
+  z-index: 1000
+  position: fixed
+  display: flex
+  display: -webkit-box
+  top: 0
+  bottom: 0
+  right: 0
+  flex-direction: column
+  justify-content: flex-end
+  -webkit-box-pack: end
+  -webkit-box-align: end
+  padding: 60px 20px 60px
+  .widget-item
+    pointer-events: auto
+    position: relative
+    @include crossBrowser(animation, consultant-online-order 5s linear infinite)
+    @include crossBrowser(animation-delay, 2s)
+    &:hover
+      @include crossBrowser(animation, none !important)
+    a.online-order
+      font-size: 1.15em
+      display: block
+      background: #ee3f3f
+      font-weight: 500
+      &:focus, &:active, &:hover
+        background: #f25050
+      span, i
+        display: inline-block
+        vertical-align: middle
+      i
+        margin-right: 15px
+        font-size: 1.8em
+
+.modal-open
+  padding-right: 0 !important
+  overflow: auto !important
+  .fixed-widget
+    display: none

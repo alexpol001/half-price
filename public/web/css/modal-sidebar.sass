@@ -1,0 +1,37 @@
+@import 'common.sass'
+
+.modal.left, .modal.right
+  .modal-header
+    border-bottom-color: #EEEEEE
+    background-color: #FAFAFA
+  .modal-dialog
+    position: fixed
+    margin: auto
+    width: 320px
+    height: 100%
+    @include crossBrowser(transform, translate3d(0%, 0, 0))
+  .modal-content
+    height: 100%
+    overflow-y: auto
+    border-radius: 0
+    border: none
+  .modal-body
+    padding: 0
+
+/*Left*/
+.modal.left.fade .modal-dialog
+  left: -320px
+  @include crossBrowser(transition, (opacity 0.3s linear, left 0.3s ease-out))
+
+.modal.left.fade.show .modal-dialog
+  left: 0
+
+/*Right*/
+.modal.right.fade .modal-dialog
+  right: -320px
+  @include crossBrowser(transition, (opacity 0.3s linear, right 0.3s ease-out))
+
+.modal.right.fade.show .modal-dialog
+  right: 0
+
+
